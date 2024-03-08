@@ -1,0 +1,74 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+
+const flags = 
+[{
+	flag:'', 
+	name:'Ingles',
+},
+{
+	flag:'', 
+	name:'Francés',
+},
+{
+	flag:'', 
+	name:'Alemán',
+	
+},
+{
+	flag:'', 
+	name:'Italiano',
+},
+{
+	flag:'', 
+	name:'Portugues',
+}
+]
+
+---
+
+<Layout title="Duolingo">
+	<div class="container">
+		<div class="banner">Banner</div>
+
+	<div class="lang">
+		{
+			flags.map((flag) => <a href="#">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="m14.303 6-3-2H6V2H4v20h2v-8h4.697l3 2H20V6z"></path></svg>
+				{flag.name} 
+		</a>
+		) 
+		}
+		
+	</div>
+</div>
+</Layout>
+
+<style>
+
+	.lang{
+		display: flex;
+		height: 40px;
+		& a{
+			transition: background 300ms ease-in-out;
+			display: flex;
+			align-items: center;
+			color:rgb(116, 116, 116);
+			text-decoration: none;
+			height: 100%;
+			padding: 0 0 8px;
+			background-color: rgb(255, 255, 255);
+		}
+		a:hover{
+			background-color: rgb(255, 255, 255);
+		}
+		border: 1px solid #7d7d7d;
+		padding: 1%;
+	}
+
+	.banner{
+		background-color: rgb(61, 247, 123);
+		height: 800px;
+	}
+</style>
