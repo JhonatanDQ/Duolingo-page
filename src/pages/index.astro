@@ -30,7 +30,15 @@ const flags =
 
 <Layout title="Duolingo">
 	<div class="container">
-		<div class="banner">Banner</div>
+		<div class="banner ">
+			<div class="animacion">
+				<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+				<dotlottie-player src="https://lottie.host/362ab0ed-2c05-49ca-8f8e-73e151ca7b41/4gtl4k7e43.json" background="transparent" speed="1" style="width: 400px; height: 400px;" loop autoplay></dotlottie-player>
+			</div>
+			<div class="">
+				<h1>¡La forma divertida, efectiva y gratis de aprender un idioma!</h1>
+			</div>
+		</div>
 
 	<div class="lang">
 		{
@@ -44,31 +52,3 @@ const flags =
 	</div>
 </div>
 </Layout>
-
-<style>
-
-	.lang{
-		display: flex;
-		height: 40px;
-		& a{
-			transition: background 300ms ease-in-out;
-			display: flex;
-			align-items: center;
-			color:rgb(116, 116, 116);
-			text-decoration: none;
-			height: 100%;
-			padding: 0 0 8px;
-			background-color: rgb(255, 255, 255);
-		}
-		a:hover{
-			background-color: rgb(255, 255, 255);
-		}
-		border: 1px solid #7d7d7d;
-		padding: 1%;
-	}
-
-	.banner{
-		background-color: rgb(61, 247, 123);
-		height: 800px;
-	}
-</style>

@@ -1,5 +1,6 @@
 ---
 const { title } = Astro.props;
+import { Icon } from 'astro-icon/components'
 ---
 
 <!doctype html>
@@ -12,9 +13,18 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<header>
-			<div class="container">
-				Encabezado
+		<header class="h-16 flex items-center shadow-md">
+			<div class="container flex max-w-[1200px] mx-auto flex-row justify-between items-center">
+				<img src="/public/logo duolingo.svg">
+				<a class="relative group font-extrabold text-gray-600 uppercase flex flex-row items-center hover:text-gray-400 cursor-pointer" h-ref="#">
+					Idioma de la pagina
+					<Icon name="mdi:chevron-down" />
+
+
+					<div class=" absolute top-6 hidden group-hover:block">
+						Opciones de menu 
+					</div>
+				</a>
 			</div>
 		</header>
 		<slot />
@@ -26,40 +36,3 @@ const { title } = Astro.props;
 		</footer>
 	</body>
 </html>
-
-<style is:global>
-	
-	footer{
-background-color: rgb(21, 255, 0);
-height: 800px;
-	}
-
-	.container {
-			background-color: rgb(255, 255, 255);
-			max-width: 800px;
-			margin: 0 auto;
-			
-	}
-
-	header {
-	background-color: greenyellow;
-	height: 73px;
-	font-family: system-ui, sans-serif;
-	}
-	html , body {
-		font-family: system-ui, sans-serif;
-		margin: 0;
-		padding: 0;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
-</style>
