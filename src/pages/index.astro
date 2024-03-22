@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import { Icon } from 'astro-icon/components'
 
 const flags = 
 [{
@@ -29,26 +30,16 @@ const flags =
 ---
 
 <Layout title="Duolingo">
-	<div class="container">
-		<div class="banner ">
-			<div class="animacion">
-				<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
-				<dotlottie-player src="https://lottie.host/362ab0ed-2c05-49ca-8f8e-73e151ca7b41/4gtl4k7e43.json" background="transparent" speed="1" style="width: 400px; height: 400px;" loop autoplay></dotlottie-player>
-			</div>
-			<div class="">
-				<h1>¡La forma divertida, efectiva y gratis de aprender un idioma!</h1>
-			</div>
-		</div>
-
-	<div class="lang">
+	<div class="justify-center h-16 flex items-center shadow-sm border-solid border-2 ">
+	<div class="flex items-center font-semibold text-gray-600">
+		<Icon name="mdi:chevron-left" />
 		{
 			flags.map((flag) => <a href="#">
-			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="m14.303 6-3-2H6V2H4v20h2v-8h4.697l3 2H20V6z"></path></svg>
-				{flag.name} 
+				<Icon name="flagpack:um" size={25} />	{flag.name} 
 		</a>
 		) 
 		}
-		
+		<Icon name="mdi:chevron-right" />
 	</div>
 </div>
 </Layout>
