@@ -22,7 +22,7 @@ const flags =
 	name:'Italiano',
 },
 {
-	flag:'', 
+	flag:'<Icon name="flagpack:um" size={35} />', 
 	name:'Portugues',
 }
 ]
@@ -32,14 +32,49 @@ const flags =
 <Layout title="Duolingo">
 	<div class="justify-center h-16 flex items-center shadow-sm border-solid border-2 ">
 	<div class="flex items-center font-semibold text-gray-600">
-		<Icon name="mdi:chevron-left" />
-		{
+
+		<Icon name="mdi:chevron-left" size={30}/>
+
+		<div class="flex flex-row space-x-4">
+			<ul class="flex items-center justify-center space-x-4 uppercase">
+				<li><Icon name="flagpack:um" size={35} /></li>
+			<a href="#" class="text-center">Inglés</a>
+			</ul>
+
+			<ul class="flex items-center justify-center space-x-4 uppercase">
+				<li><Icon name="flagpack:fr" size={35} /></li>
+				<a href="#" class="text-center">francés</a>
+			</ul>
+			<ul class="flex items-center justify-center space-x-4 uppercase">
+				<li><Icon name="flagpack:de" size={35} /></li>
+				<a href="#" class="text-center">alemán</a>
+			</ul>
+			<ul class="flex items-center justify-center space-x-4 uppercase">
+				<li><Icon name="flagpack:it" size={35} /></li>
+				<a href="#" class="text-center">Italiano</a>
+			</ul>
+			<ul class="flex items-center justify-center space-x-4 uppercase">
+				<li><Icon name="flagpack:br" size={35} /></li>
+				<a href="#" class="text-center">portuguese</a>
+			</ul>
+			<ul class="flex items-center justify-center space-x-4 uppercase">
+				<li><Icon name="flagpack:ru" size={35} /></li>
+				<a href="#" class="text-center">ruso</a>
+			</ul>
+			<ul class="flex items-center justify-center space-x-4 uppercase">
+				<li><Icon name="flagpack:sj" size={35} /></li>
+				<a href="#" class="text-center">sueco</a>
+			</ul>
+		</div>
+		
+		<!-- {
+			
 			flags.map((flag) => <a href="#">
-				<Icon name="flagpack:um" size={25} />	{flag.name} 
+					{flag.name}  
 		</a>
 		) 
-		}
-		<Icon name="mdi:chevron-right" />
+		} -->
+		<Icon name="mdi:chevron-right" size={30}/>
 	</div>
 </div>
 </Layout>
